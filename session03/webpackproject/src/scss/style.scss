@@ -1,0 +1,22 @@
+$base: #a7b8e1;
+$dark: darken($base, 40%);
+$darker: darken($base, 60%);
+
+body {
+	margin: 0;
+	color: $base;
+	background-color: $dark;
+}
+
+.hover {
+	color: $darker;
+}
+
+a {
+	text-decoration: none;
+	color: $dark;
+	> img {
+		box-shadow: 1 1 1;
+	}
+}
+
