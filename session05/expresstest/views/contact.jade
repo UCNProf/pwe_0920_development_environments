@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1= title
+  if request == "get"
+    form(name="contactform",method="post")
+      label(for="name") Name:
+      input(type="text",name="name",id="name")
+      label(for="email") Email:
+      input(type="email",name="email",id="email")
+      label(for="text") Text:
+      textarea(name=text,id=text)
+      button Send
+  else if request == "post"
+    p Hi, #{name}! Thank you for request.
