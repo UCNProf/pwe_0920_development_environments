@@ -2,7 +2,7 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     copy: {
-      main: {
+      test: {
         files: [
           {expand: true, cwd: './src', src: 'index.html', dest: './dist'},
           {expand: true, cwd: './src/api', src: '*', dest: './dist/api/'},
@@ -19,5 +19,5 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-copy');
 
-  grunt.registerTask('default', ['copy:main']);
+  grunt.registerTask('default', ['copy:test']);
 };

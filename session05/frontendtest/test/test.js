@@ -3,12 +3,12 @@ mocha.setup('bdd');
 var assert = chai.assert;
 
 describe('initialize_elements', () => {
-	it('should set elements as variables typeof "object"', () => {
+	it('should set elements as variables not null', () => {
 		initialize_elements();
 		// var courses_ul, courseinfo_div, info_p;
-		assert.equal(typeof(courses_ul), 'object');
-		assert.equal(typeof(courseinfo_div), 'object');
-		assert.equal(typeof(info_p), 'object');
+		assert.notEqual(courses_ul, null);
+		assert.notEqual(courseinfo_div, null);
+		assert.notEqual(info_p, null);
 	});
 });
 
