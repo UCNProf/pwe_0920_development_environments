@@ -1,0 +1,11 @@
+extends ../layout
+
+block content
+  h1= title
+  p List of notes
+  ul(id="notes")
+    each note in notes
+      li
+        a(href="/notes/#{note._id}")= note.title
+  p
+    a(href="/notes/new") New note

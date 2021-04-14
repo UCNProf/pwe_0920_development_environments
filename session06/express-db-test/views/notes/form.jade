@@ -1,0 +1,16 @@
+extends ../layout
+
+block content
+  h1= title
+  form(name="note", method="post")
+    label(for="title") Title:
+    if note
+      input(type="text",name="title",id="title",value=note.title)
+    else
+      input(type="text",name="title",id="title")
+    label(for="content") Content:
+    if note
+      textarea(name="content",id="content")= note.content
+    else
+      textarea(name="content",id="content")
+    button Save
