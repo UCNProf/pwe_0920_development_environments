@@ -53,7 +53,6 @@ router.post('/:id', function(req, res, next) {
 		res.redirect('/notes');
 	})
 	.catch(err => {console.log(err)});
-
 });
 
 
